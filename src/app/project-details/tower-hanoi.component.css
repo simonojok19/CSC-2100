@@ -1,0 +1,98 @@
+.disk-container {
+  height: 200px;
+  width: inherit;
+}
+
+.disk-1, .disk-2, .disk-3, .pole-1, .pole-2, .pole-3, .base-1, .base-2, .base-3 {
+  border-radius: 2px;
+}
+.card {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  height: 500px;
+}
+
+.disk-1 {
+  background-color: green;
+  width: 150px;
+  height: 20px;
+  position: relative;
+  top: 180px;
+  left: 115px;
+}
+
+.disk-2 {
+  background-color: blue;
+  width: 180px;
+  height: 20px;
+  position: relative;
+  top: 180px;
+  left: 100px;
+}
+
+.disk-3 {
+  background-color: red;
+  width: 200px;
+  height: 20px;
+  position: relative;
+  top: 180px;
+  left: 90px;
+}
+
+.pole-1 {
+  width: 20px;
+  height: 200px;
+  background-color: black;
+  display: inline-block;
+  position: relative;
+  left: 180px;
+  top: 0;
+}
+
+.pole-2 {
+  width: 20px;
+  height: 200px;
+  background-color: black;
+  display: inline-block;
+  position: relative;
+  left: 420px;
+  top: 0;
+}
+
+.pole-3 {
+  width: 20px;
+  height: 200px;
+  background-color: black;
+  display: inline-block;
+  position: relative;
+  left: 680px;
+  top: 0;
+}
+
+.base-1 {
+  width: 250px;
+  height: 20px;
+  background-color: black;
+  display: inline-block;
+  position: relative;
+}
+
+.base-2 {
+  width: 250px;
+  height: 20px;
+  background-color: black;
+  display: inline-block;
+  position: relative;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.base-3 {
+  width: 250px;
+  height: 20px;
+  background-color: black;
+  display: inline-block;
+  position: relative;
+}
