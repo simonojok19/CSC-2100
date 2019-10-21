@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { ProjectDetailsModule } from './project-details/project-details.module';
 import { P2Module } from './p2/p2.module';
+import { P1Module } from './p1/p1.module';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -20,6 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SharedModule,
     ProjectDetailsModule,
     P2Module,
+    P1Module
   ],
   providers: [],
   bootstrap: [AppComponent]

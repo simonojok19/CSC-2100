@@ -5,11 +5,16 @@ import { SinglyLinkedListComponent } from './singly-linked-list/singly-linked-li
 import { DoublyLinkedListComponent } from './doubly-linked-list/doubly-linked-list.component';
 
 
-
+const components = [
+  StackComponent,
+  SinglyLinkedListComponent,
+  DoublyLinkedListComponent
+];
 @NgModule({
-  declarations: [StackComponent, SinglyLinkedListComponent, DoublyLinkedListComponent],
+  declarations: [components],
   imports: [
     CommonModule
-  ]
+  ],
+  exports : [components]
 })
 export class P1Module { }
