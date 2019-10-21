@@ -1,0 +1,16 @@
+<div class="card">
+	<div class="card-header form-group">
+		<p>Enter numbers separeted by comma ,</p>
+	</div>
+	<div class="card-body">
+		<label for="input">Enter Values: </label>
+		<input [(ngModel)]="rowItems" type="text" name="input" class="form-control">
+		<br>
+		<label>Sorted List: </label>
+		<br>
+		<input type="text" name="" value="{{ sorted}}" class="form-control">
+		<br>
+		<br>
+		<button class="btn btn-outline-primary" (click)="handleClick()">Sort and Show Time</button>
+	</div>
+</div>

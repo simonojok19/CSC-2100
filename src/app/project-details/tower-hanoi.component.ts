@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-tower-hanoi',
@@ -10,6 +11,9 @@ export class TowerHanoiComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    $(document).ready(() => {
+      alert('Hello Jquery');
+    });
   }
 
 }
