@@ -1,1 +1,111 @@
-<p>doubly-linked-list works!</p>
+<div class="card p-2 mx-3 my-2">
+  <div class="card-header">
+    <h1>Doubly Linked List Implementation</h1>
+  </div>
+  <div class="card-body">
+    <div class="list-visualization">
+      <div class="node" *ngFor="let node of arrayList">
+        <h1 class="current-data">{{ node.getValue() }}</h1>
+      </div>
+    </div>
+    <hr>
+    <h2 class="headings bg-success p-2 text-white">Implemented Interfaces Adding Elements</h2>
+    <div class="interface my-3 p-3">
+      <h2>Add Element Beginning</h2>
+      <br>
+      <input type="text" [(ngModel)]="input" name="addElementBeginning" value="" class="form-control">
+      <button type="button" (click)="addElementBegginning()" class="btn btn-outline-primary">Add Element</button>
+      <small [hidden]="!error" class="error-box">The Element Input Field is Empty</small>
+      <div class="side-list">
+        <span class="side-list-element px-1 m-1 bg-success text-white" *ngFor="let el of arrayList">{{ el.getValue() }}</span>
+      </div>
+    </div>
+
+    <!-- The second fommm     -->
+    <div class="interface my-3 p-3">
+      <h2>Add Element Before</h2>
+      <br>
+      <label for="oldElement" class="mx-3">Before: </label>
+      <select class="form-control" name="" [(ngModel)]="input_count">
+        <option value="1" >A</option>
+        <option value="2" >B</option>
+        <option value="3" >C</option>
+      </select>
+      <label for="newElement" class="mx-3">Element: </label>
+      <input type="text" [(ngModel)]="input" name="newElement" value="" class="form-control">
+      <button type="button" (click)="addElementBefore()" class="btn btn-outline-primary">Add Element</button>
+      <small [hidden]="!error" class="error-box">The Element Input Field is Empty</small>
+      <small [hidden]="!node_missing" class="error-box">Sorry This node is missing, enter another value</small>
+    </div>
+
+    <!-- The add After Interface     -->
+    <div class="interface my-3 p-3">
+      <h2>Add Element After</h2>
+      <br>
+      <label for="oldElement" class="mx-3">Before: </label>
+      <select class="form-control" name="" [(ngModel)]="input_count">
+        <option value="1" >A</option>
+        <option value="2" >B</option>
+        <option value="3" >C</option>
+      </select>
+      <label for="newElement" class="mx-3">Element: </label>
+      <input type="text" [(ngModel)]="input" name="newElement" value="" class="form-control">
+      <button type="button" (click)="addElementAfter()" class="btn btn-outline-primary">Add Element</button>
+      <small [hidden]="!error" class="error-box">The Element Input Field is Empty</small>
+      <small [hidden]="!node_missing" class="error-box">Sorry This node is missing, enter another value</small>
+    </div>
+
+    <div class="interface my-3 p-3">
+      <h2>Add Element End</h2>
+      <br>
+      <input type="text" [(ngModel)]="input" name="addElementBeginning" value="" class="form-control">
+      <button type="button" (click)="addElementEnd()" class="btn btn-outline-primary">Add Element</button>
+      <small [hidden]="!error" class="error-box">The Element Input Field is Empty</small>
+    </div>
+    <h1 class="headings bg-success p-2 text-white">Interfaces for removing Elements</h1>
+    <div class="interface my-3 p-3">
+      <h2>Romove Element Beginning</h2>
+      <br>
+      <input type="text" disabled [(ngModel)]="input" name="addElementBeginning" value="" class="form-control">
+      <button type="button" (click)="removeElementBeginning()" class="btn btn-outline-danger">Remove Element</button>
+      <small [hidden]="!error" class="error-box">The Element Input Field is Empty</small>
+    </div>
+    <!-- Remove Node Before -->
+    <div class="interface my-3 p-3">
+      <h2>Remove Element Before</h2>
+      <br>
+      <label for="oldElement" class="mx-3">Before Element: </label>
+      <select class="form-control" name="" [(ngModel)]="input_count">
+        <option value="1" >A</option>
+        <option value="2" >B</option>
+        <option value="3" >C</option>
+      </select>
+      <button type="button" (click)="removeElementBefore()" class="btn btn-outline-danger rm-button">Remove Element</button>
+      <small [hidden]="!error" class="error-box">The Element Input Field is Empty</small>
+      <small [hidden]="!node_missing" class="error-box">Sorry This node is missing, enter another value</small>
+    </div>
+
+    <!-- Remove Node After -->
+    <div class="interface my-3 p-3">
+      <h2>Remove Element After</h2>
+      <br>
+      <label for="oldElement" class="mx-3">Before Element: </label>
+      <select class="form-control" name="" [(ngModel)]="input_count">
+        <option value="1" >A</option>
+        <option value="2" >B</option>
+        <option value="3" >C</option>
+      </select>
+      <button type="button" (click)="removeElementAfter()" class="btn btn-outline-danger rm-button">Remove Element</button>
+      <small [hidden]="!error" class="error-box">The Element Input Field is Empty</small>
+      <small [hidden]="!node_missing" class="error-box">Sorry This node is missing, enter another value</small>
+    </div>
+    <!--  Remove element end -->
+    <div class="interface my-3 p-3">
+      <h2>Romove Element End</h2>
+      <br>
+      <input type="text" disabled [(ngModel)]="input" name="addElementBeginning" value="" class="form-control">
+      <button type="button" (click)="removeElementEnd()" class="btn btn-outline-danger">Remove Element</button>
+      <small [hidden]="!error" class="error-box">The Element Input Field is Empty</small>
+    </div>
+  </div>
+</div>

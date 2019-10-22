@@ -26,18 +26,46 @@ export class LinkedList {
   }
 
   addNodeBefore(oldNode: Node, newNode: Node) {
-    if(true===true) {
+    if(oldNode === this.head) {
+      this.addNodeBeginning(newNode);
+      console.log(oldNode, newNode);
+    }
+    else {
+      console.log(newNode);
+      this.getNodeBefore(oldNode).setNext(newNode);
       newNode.setNext(oldNode);
-      oldNode = newNode;
       this.count++;
     }
   }
 
   addNodeAfter(oldNode: Node, newNode: Node) {
-    if(true === true) {
-      newNode.setNext(oldNode.getNext());
+    // if(oldNode === this.head) {
+    //   this.addNodeEnd(newNode);
+    //   console.log(oldNode, newNode);
+    // }
+    // else {
+      console.log(newNode);
+      newNode.setNext(this.getNodeAfter(oldNode));
       oldNode.setNext(newNode);
+      this.count++;
+    //}
+  }
+
+  getNodeByCount(count: number) {
+    let current = this.head;
+    let counter = 1;
+    let found = null;
+    while( counter <= this.getSize()) {
+      if( counter === count) {
+        found = current;
+      }
+
+      if (current != null) {
+        current = current.getNext()
+      }
+      counter++;
     }
+    return found != null ? found : null;
   }
 
   removeNodeBeginning() {
@@ -53,7 +81,7 @@ export class LinkedList {
     if(this.count === 0) {
       console.log('List empty');
     } else {
-      this.tail = null;
+      this.getNodeBefore(this.tail).setNext(null);
       this.count--;
     }
   }
@@ -70,18 +98,16 @@ export class LinkedList {
 
   getNodeAfter(node: Node) {
     let current = this.head;
-    let n = null;
-    while( current.getNext()) {
-      if(current.getNext() === node) {
-        n = current.getNext();
+    while(current.getNext()) {
+      if(current === node) {
+        return current.getNext();
       }
       current = current.getNext();
     }
-    return n;
   }
 
   removeNodeBefore(node: Node) {
-    this.getNodeBefore(this.getNodeBefore(node)).setNext(node);
+    this.getNodeBefore(this.getNodeBefore(node)).setNext(node); // changing b
     this.count--;
   }
 
@@ -89,5 +115,9 @@ export class LinkedList {
     node.setNext(node.getNext().getNext());
     console.log(node.getNext());
     this.count--;
+  }
+
+  getSize(): number {
+    return this.count;
   }
 }

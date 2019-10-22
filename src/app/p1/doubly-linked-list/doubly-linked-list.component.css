@@ -1,0 +1,65 @@
+.list-visualization {
+  border-width: medium;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: blue;
+  padding: 5px;
+}
+
+.node {
+  background-color: blue;
+  width: 100px;
+  height: 50px;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 1px;
+}
+
+.current-data {
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  color: white;
+}
+
+input, select{
+  width: 100px;
+  display: inline-block;
+  margin-right: 30px;
+  border-color: green;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.interface {
+  border-color: blue;
+  border-style: solid;;
+  border-width: 2px;
+  padding: 5px;
+  border-radius: 2px;
+}
+
+.error-box {
+  margin-left: 10px;
+  margin-right: 10px;
+  color: white;
+  background-color: red;
+  padding: 10px;
+}
+
+.side-list {
+  display: inline-block;
+  border-color: blue;
+  border-style: solid;
+  border-radius: 2px;
+  padding: 2px;
+  float: right;
+  /* height: 40px; */
+}
+
+.side-list-element {
+  /* padding: 5px;
+  border-color: block;
+  border-style: solid;
+  border-radius: 2px; */
+}

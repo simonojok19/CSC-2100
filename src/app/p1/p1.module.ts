@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { StackComponent } from './stack/stack.component';
 import { SinglyLinkedListComponent } from './singly-linked-list/singly-linked-list.component';
@@ -13,7 +14,8 @@ const components = [
 @NgModule({
   declarations: [components],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports : [components]
 })
