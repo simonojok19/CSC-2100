@@ -1,10 +1,10 @@
 <div class="card mt-3">
   <div class="card-header">
-    <h2>Stack Data Structure</h2>
+    <h2>Queue Data Structure</h2>
   </div>
   <div class="card-body">
     <div class="sk-data-container">
-      <div class="sk-data-element mx-1 p-2" *ngFor="let node of stackArray">
+      <div class="sk-data-element mx-1 p-2" *ngFor="let node of queueArray">
         <h5 class="text-white">{{ node.getValue() }}</h5>
       </div>
     </div>
@@ -13,9 +13,9 @@
       <div class="interface-implementations col-sm-12 col-md-12 p-4 m-3 bg-secondary">
         <h3>Retrieve All</h3>
         <div class="retrieve-all">
-          <button type="button" class="btn btn-outline-success m-2 ra-btn mr-3" (click)="peekAll()">Retrieve All</button>
+          <button type="button" class="btn btn-outline-success m-2 ra-btn mr-3" (click)="retrieveAllElements()">Retrieve All</button>
           <div class="sk-data-container" style="float: right;">
-            <div class="sk-data-element mx-1 p-2" *ngFor="let node of stPeekArray">
+            <div class="sk-data-element mx-1 p-2" *ngFor="let node of retrive_all_array">
               <h5 class="text-white">{{ node.getValue() }}</h5>
             </div>
           </div>
@@ -24,17 +24,17 @@
       <!-- some dav -->
 
       <div class="interface-implementations col-sm-12 col-md-12 p-4 m-3 bg-secondary">
-        <h3>Return Top [peek()]</h3>
+        <h3>Return Size</h3>
         <div class="return-top">
           <div class="ra-data-element">
             <div class="ra-data-element mx-1 p-1">
-              <h2 class="data-element text-white mx-1" *ngIf="show">{{ stack.peek().getValue() }}</h2>
+              <h2 class="data-element text-white mx-1" *ngIf="show">{{ stack.getSize() }}</h2>
             </div>
           </div>
-          <button type="button" class="btn btn-primary ra-btn mr-3" (click)="peek()">Return Top</button>
+          <button type="button" class="btn btn-primary ra-btn mr-3" (click)="getSize()">Return Size</button>
           <div class="sk-data-container" style="float: right;">
-            <div class="sk-data-element mx-1 p-2" *ngFor="let node of stackArray">
-              <h5 class="text-white">{{ node.getValue() }}</h5>
+            <div class="sk-data-element mx-1 p-2" *ngFor="let node of queueArray">
+              <h5 class="text-white">{{ size }}</h5>
             </div>
           </div>
         </div>

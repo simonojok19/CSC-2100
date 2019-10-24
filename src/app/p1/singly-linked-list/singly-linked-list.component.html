@@ -27,15 +27,16 @@
       <br>
       <label for="oldElement" class="mx-3">Before: </label>
       <select class="form-control" name="" [(ngModel)]="input_count">
-        <option value="1" >A</option>
-        <option value="2" >B</option>
-        <option value="3" >C</option>
+        <option value="{{ i + 1 }}" *ngFor="let node of arrayList; index as i;">{{node.getValue()}}</option>
       </select>
       <label for="newElement" class="mx-3">Element: </label>
       <input type="text" [(ngModel)]="input" name="newElement" value="" class="form-control">
       <button type="button" (click)="addElementBefore()" class="btn btn-outline-primary">Add Element</button>
       <small [hidden]="!error" class="error-box">The Element Input Field is Empty</small>
       <small [hidden]="!node_missing" class="error-box">Sorry This node is missing, enter another value</small>
+      <div class="side-list">
+        <span class="side-list-element px-1 m-1 bg-success text-white" *ngFor="let el of arrayList">{{ el.getValue() }}</span>
+      </div>
     </div>
 
     <!-- The add After Interface     -->
@@ -44,15 +45,16 @@
       <br>
       <label for="oldElement" class="mx-3">Before: </label>
       <select class="form-control" name="" [(ngModel)]="input_count">
-        <option value="1" >A</option>
-        <option value="2" >B</option>
-        <option value="3" >C</option>
+        <option value="{{ i + 1 }}" *ngFor="let node of arrayList; index as i;">{{node.getValue()}}</option>
       </select>
       <label for="newElement" class="mx-3">Element: </label>
       <input type="text" [(ngModel)]="input" name="newElement" value="" class="form-control">
       <button type="button" (click)="addElementAfter()" class="btn btn-outline-primary">Add Element</button>
       <small [hidden]="!error" class="error-box">The Element Input Field is Empty</small>
       <small [hidden]="!node_missing" class="error-box">Sorry This node is missing, enter another value</small>
+      <div class="side-list">
+        <span class="side-list-element px-1 m-1 bg-success text-white" *ngFor="let el of arrayList">{{ el.getValue() }}</span>
+      </div>
     </div>
 
     <div class="interface my-3 p-3">
@@ -61,6 +63,9 @@
       <input type="text" [(ngModel)]="input" name="addElementBeginning" value="" class="form-control">
       <button type="button" (click)="addElementEnd()" class="btn btn-outline-primary">Add Element</button>
       <small [hidden]="!error" class="error-box">The Element Input Field is Empty</small>
+      <div class="side-list">
+        <span class="side-list-element px-1 m-1 bg-success text-white" *ngFor="let el of arrayList">{{ el.getValue() }}</span>
+      </div>
     </div>
     <h1 class="headings bg-success p-2 text-white">Interfaces for removing Elements</h1>
     <div class="interface my-3 p-3">
@@ -69,6 +74,9 @@
       <input type="text" disabled [(ngModel)]="input" name="addElementBeginning" value="" class="form-control">
       <button type="button" (click)="removeElementBeginning()" class="btn btn-outline-danger">Remove Element</button>
       <small [hidden]="!error" class="error-box">The Element Input Field is Empty</small>
+      <div class="side-list">
+        <span class="side-list-element px-1 m-1 bg-success text-white" *ngFor="let el of arrayList">{{ el.getValue() }}</span>
+      </div>
     </div>
     <!-- Remove Node Before -->
     <div class="interface my-3 p-3">
@@ -76,13 +84,14 @@
       <br>
       <label for="oldElement" class="mx-3">Before Element: </label>
       <select class="form-control" name="" [(ngModel)]="input_count">
-        <option value="1" >A</option>
-        <option value="2" >B</option>
-        <option value="3" >C</option>
+        <option value="{{ i + 1 }}" *ngFor="let node of arrayList; index as i;">{{node.getValue()}}</option>
       </select>
       <button type="button" (click)="removeElementBefore()" class="btn btn-outline-danger rm-button">Remove Element</button>
       <small [hidden]="!error" class="error-box">The Element Input Field is Empty</small>
       <small [hidden]="!node_missing" class="error-box">Sorry This node is missing, enter another value</small>
+      <div class="side-list">
+        <span class="side-list-element px-1 m-1 bg-success text-white" *ngFor="let el of arrayList">{{ el.getValue() }}</span>
+      </div>
     </div>
 
     <!-- Remove Node After -->
@@ -91,13 +100,14 @@
       <br>
       <label for="oldElement" class="mx-3">Before Element: </label>
       <select class="form-control" name="" [(ngModel)]="input_count">
-        <option value="1" >A</option>
-        <option value="2" >B</option>
-        <option value="3" >C</option>
+        <option value="{{ i + 1 }}" *ngFor="let node of arrayList; index as i;">{{node.getValue()}}</option>
       </select>
       <button type="button" (click)="removeElementAfter()" class="btn btn-outline-danger rm-button">Remove Element</button>
       <small [hidden]="!error" class="error-box">The Element Input Field is Empty</small>
       <small [hidden]="!node_missing" class="error-box">Sorry This node is missing, enter another value</small>
+      <div class="side-list">
+        <span class="side-list-element px-1 m-1 bg-success text-white" *ngFor="let el of arrayList">{{ el.getValue() }}</span>
+      </div>
     </div>
     <!--  Remove element end -->
     <div class="interface my-3 p-3">
@@ -106,6 +116,9 @@
       <input type="text" disabled [(ngModel)]="input" name="addElementBeginning" value="" class="form-control">
       <button type="button" (click)="removeElementEnd()" class="btn btn-outline-danger">Remove Element</button>
       <small [hidden]="!error" class="error-box">The Element Input Field is Empty</small>
+      <div class="side-list">
+        <span class="side-list-element px-1 m-1 bg-success text-white" *ngFor="let el of arrayList">{{ el.getValue() }}</span>
+      </div>
     </div>
   </div>
 </div>

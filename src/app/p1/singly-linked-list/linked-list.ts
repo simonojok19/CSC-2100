@@ -78,12 +78,17 @@ export class LinkedList {
   }
 
   removeNodeEnd() {
-    if(this.count === 0) {
-      console.log('List empty');
+    if((this.count <= 1) && (this.count >= 1)) {
+      this.head = null;
+      this.tail = null;
+      this.count--;
     } else {
-      this.getNodeBefore(this.tail).setNext(null);
+      let last = this.getNodeBefore(this.tail);
+      this.tail = last;
+      last.setNext(null);
       this.count--;
     }
+    console.log(this.count);
   }
 
   getNodeBefore(node: Node) {
